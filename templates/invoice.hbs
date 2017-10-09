@@ -1,0 +1,101 @@
+<div class="infoContact row">
+  <p class="col-xs-3">
+    <span >{{config.name}}</span><br>
+    {{nlbr config.adress}}
+  </p>
+  <p class="col-xs-4">
+    {{nlbr config.infos}}
+  </p>
+    <div class="col-xs-2">N° ordre MDA</div>
+    <div class="col-xs-2 invoiceID up">{{config.mda}}</div>
+
+    <div class="col-xs-2">N° SIRET</div>
+    <div class="col-xs-2 invoiceID up">{{config.siret}}</div>
+
+    <div class="col-xs-2">N° T.V.A. intra.</div>
+    <div class="col-xs-2 invoiceID up">{{config.tvaIntra}}</div>
+
+    <div class="col-xs-2">code APE</div>
+    <div class="col-xs-2 invoiceID up">{{config.ape}}</div>
+</div>
+
+<div class="description row">
+  <p class="col-xs-7">facture n° <span class="up invoiceID">{{invoice.id_string}}</span>
+  </p>
+  <p class="col-xs-5">{{invoice.date}}</p>
+
+  <div class="col-xs-7">
+    <h4>{{invoice.title}}</h4>
+    <p>{{invoice.description}}</p>
+  </div>
+  <div class="col-xs-5">
+
+    <h4>{{invoice.client.instituion}}</h4>
+    <p>{{invoice.client.person}}</p>
+
+    <p>
+    {{invoice.client.address}}<br>
+    {{invoice.client.cp}} {{invoice.client.city}}<br>
+    {{invoice.client.country}}<br>
+    </p>
+  </div>
+</div>
+
+<div class="howmuch">
+  <div class="row">
+      <p class="col-xs-5">Montant hors taxes</p>
+      <p class="col-xs-2 money">{{invoice.priceHT}}</p>
+  </div>
+  <div class="row">
+      <p class="col-xs-5">T.V.A. ({{invoice.tx}})</p>
+      <p class="col-xs-2 money">{{invoice.tva}}</p>
+  </div>
+  <div class="row">
+      <h4 class="col-xs-5 up total">Montant T.T.C. (net à payer)</h4>
+      <h4 class="col-xs-2 up total money">{{invoice.ttc}}</h4>
+  </div>
+</div>
+
+<div class="row rib">
+  <div class="col-xs-6 mentions">
+      {{nlbr config.mentions}}
+  </div>
+  <div class="col-xs-offset-1 col-xs-5">
+    <table class="table">
+      <tr>
+        <td colspan="4">Relevé d’Identité Bancaire</td>
+      </tr>
+      <tr>
+        <th colspan="2">Titulaire du compte</th>
+        <th colspan="2">Domiciliation</th>
+      </tr>
+      <tr>
+        <td colspan="2">{{nlbr config.rib-owner}}</td>
+        <td colspan="2">{{nlbr config.rib-bankName}}</td>
+      </tr>
+      <tr>
+        <th colspan="4">RIB (Identifiant national de compte)</th>
+      </tr>
+      <tr>
+        <td>éTABLISSEMENT<br>{{config.rib-etablissement}}</td>
+        <td>GUICHET<br>{{config.rib-guichet}}</td>
+        <td>N°&nbsp;COMPTE<br><span class="invoiceID">{{config.compteId}}</span></td>
+        <td>CLé&nbsp;RIB<br>{{config.rib-key}}</td>
+      </tr>
+      </table>
+      <table class="table">
+      <tr>
+        <th>IBAN (Identifiant international de compte)</th>
+        <th>BIC</th>
+      </tr>
+      <tr class="invoiceID">
+        <td>{{config.rib-iban}}</td>
+        <td>{{config.rib-bic}}</td>
+      </tr>
+      </table>
+      <table class="table">
+
+    </table>
+  </div>
+</div>
+</div>

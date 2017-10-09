@@ -1,0 +1,9 @@
+{{#each invoices}}
+ <div class="row invoiceButton" id="{{id_string}}">
+  <p class="col-xs-1">{{id_string}}</p>
+  <p class="col-xs-1">{{date}}</p>
+  <p class="col-xs-1 money">{{priceHT}}</p>
+  <p class="col-xs-4">{{client.person}}/{{client.instituion}}</p>
+  <p class="col-xs-5">{{title}}</p>
+</div>
+{{/each}}

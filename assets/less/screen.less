@@ -1,0 +1,55 @@
+@import "bootstrap.less";
+body {
+  font-family: 'Karla', sans-serif;
+  color: black;
+  text-transform: lowercase;
+
+  .money { text-align: right}
+  .rib {
+    // position: absolute;
+    // bottom: 0;
+  }
+  h1,h2,h3,h4 {
+    font-weight: 700;
+  }
+  .invoiceID {
+    text-transform: uppercase;
+  }
+  .infoContact {
+    height: 15vh;
+  }
+  .description {
+    height: 35vh;
+  }
+  .howmuch {
+    height: 25vh;
+  }
+  .invoiceButton:hover {
+    border: solid black 1px;
+    cursor:pointer;
+  }
+
+  #render {
+    .invoiceButton:nth-child(even) {background: #CCC}
+    .invoiceButton:nth-child(odd) {background: #FFF}
+  }
+
+
+  .ids {
+    font-weight: 700;
+    // background-color: black;
+    // color: white;
+  }
+  .up {
+    font-weight: 700;
+  }
+  .total {
+    padding-top: 1em;
+    border-top: solid black 1px;
+  }
+  .mentions {
+    font-style: italic;
+  }
+}
+
+

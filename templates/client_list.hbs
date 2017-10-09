@@ -1,0 +1,14 @@
+{{#each clients}}
+ <div >
+  <h3>{{person}}, {{instituion}}</h3>
+
+    {{#each operations}}
+    <div class="row">
+      <p class="col-xs-1">{{date}}</p>
+      <p class="col-xs-1 money">{{priceHT}}&nbsp;€</p>
+      <p class="col-xs-8">{{description}}</p>
+    </div>
+    {{/each}}
+  <hr>
+</div>
+{{/each}}
