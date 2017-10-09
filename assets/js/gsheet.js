@@ -74,11 +74,16 @@ function handleSignoutClick(event) {
 function getRanges() {
   if(window.location.hash){
     console.log(window.location.hash)
-    var spreadsheetId = window.location.hash.replace("#","")
+    var spreadsheetId = window.location.hash.replace("#","");
   }else {
     var spreadsheetId = prompt("Please enter your spreadsheetId", "none");
     window.location.hash = "#"+spreadsheetId;
   }
+
+  $('.sheetlink')
+    .attr('href','https://docs.google.com/spreadsheets/d/'+spreadsheetId)
+    .removeClass('hidden');
+
   gapi.client.sheets.spreadsheets.values.batchGet({
     spreadsheetId: spreadsheetId,
     majorDimension: 'ROWS',
