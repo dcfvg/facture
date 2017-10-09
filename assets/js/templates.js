@@ -87,7 +87,7 @@ this["fac"]["invoice"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
     + "</td>\n        <td>GUICHET<br>"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.config : depth0)) != null ? stack1['rib-guichet'] : stack1), depth0))
     + "</td>\n        <td>N°&nbsp;COMPTE<br><span class=\"invoiceID\">"
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.config : depth0)) != null ? stack1.compteId : stack1), depth0))
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.config : depth0)) != null ? stack1['rib-compteId'] : stack1), depth0))
     + "</span></td>\n        <td>CLé&nbsp;RIB<br>"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.config : depth0)) != null ? stack1['rib-key'] : stack1), depth0))
     + "</td>\n      </tr>\n      </table>\n      <table class=\"table\">\n      <tr>\n        <th>IBAN (Identifiant international de compte)</th>\n        <th>BIC</th>\n      </tr>\n      <tr class=\"invoiceID\">\n        <td>"
