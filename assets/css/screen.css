@@ -6744,9 +6744,6 @@ body .infoContact {
 body .description {
   height: 35vh;
 }
-body .howmuch {
-  height: 20vh;
-}
 body .invoiceButton:hover {
   border: solid black 1px;
   cursor: pointer;
